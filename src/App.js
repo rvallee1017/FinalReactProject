@@ -4,6 +4,7 @@ import Logo from "./assets/movies-logo.png";
 import "./index.css";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/ui/Footer";
+import Home from "./components/pages/Home.jsx";
 
 function App() {
   return (

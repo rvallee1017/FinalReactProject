@@ -1,5 +1,5 @@
 import React from "react";
-import cinemaLanding from "../assets/cinema-landing.jeg";
+import cinemaLanding from "../assets/cinema-landing.jpg";
 
 const Landing = () => {
   return (

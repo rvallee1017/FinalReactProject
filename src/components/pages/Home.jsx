@@ -1,7 +1,7 @@
 import React from "react";
 import Landing from "../components/Landing";
-import Highlights from "../components/Highlights.jsx";
-import Explore from "../components/Explore";
+import Highlights from "../components/Higlights.jsx";
+import Explore from "../ui/Explore";
 
 const Home = () => {
   return (
