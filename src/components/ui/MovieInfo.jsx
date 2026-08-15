@@ -7,34 +7,43 @@ const MovieInfo = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
-    useEffect(() => {
+  useEffect(() => {
     async function fetchMovie() {
-        const response = await fetch(
-            `https://www.omdbapi.com/?i=${id}&apikey=8d9a5352`
-        );
-        const data = await response.json();
-        setMovie(data);
+      const response = await fetch(
+        `https://www.omdbapi.com/?i=${id}&apikey=8d9a5352`,
+      );
+      const data = await response.json();
+      setMovie(data);
     }
     fetchMovie();
-    }, [id]);
+  }, [id]);
 
-    if (!movie) {
+  if (!movie) {
     return <div>Loading...</div>;
-    }   
+  }
 
-    return (
+  return (
     <div className="movie-info">
+      <img
+        className="movie-info__poster"
+        src={movie.Poster}
+        alt={movie.Title}
+      />
+
+      <div className="movie-info__text">
         <h1>{movie.Title}</h1>
-        <p><strong>Year:</strong> {movie.Year}</p>
-        <p><strong>Genre:</strong> {movie.Genre}</p>
-        <p><strong>Director:</strong> {movie.Director}</p>
-        <p><strong>Actors:</strong> {movie.Actors}</p>
-        <p><strong>Plot:</strong> {movie.Plot}</p>
-        <figure className="movie-info__img--wrapper">
-            <img className="movie-info__img" src={movie.Poster} alt={movie.Title} />
-        </figure>
+        <p>
+          <strong>Year:</strong> {movie.Year}
+        </p>
+        <p>
+          <strong>Genre:</strong> {movie.Genre}
+        </p>
+        <p>
+          <strong>Plot:</strong> {movie.Plot}
+        </p>
+      </div>
     </div>
-    );
-}
+  );
+};
 
 export default MovieInfo;

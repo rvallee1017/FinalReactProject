@@ -4,7 +4,21 @@ import { Link } from "react-router-dom";
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("fast");
-  const [sort, setSort] = useState("");
+
+  function sortMovies(event) {
+    const sortValue = event.target.value;
+    const sortedMovies = [...movies];
+
+    if (sortValue === "A_TO_Z") {
+      sortedMovies.sort((a, b) => a.Title.localeCompare(b.Title));
+    }
+
+    if (sortValue === "Z_TO_A") {
+      sortedMovies.sort((a, b) => b.Title.localeCompare(a.Title));
+    }
+
+    setMovies(sortedMovies);
+  }
 
   useEffect(() => {
     async function fetchMovies() {
@@ -14,21 +28,6 @@ const Movies = () => {
 
       const data = await response.json();
       setMovies(data.Search || []);
-    }
-
-    function sortMovies(event) {
-      const sortValue = event.target.value;
-      const sortedMovies = [...movies];
-
-      if (sortValue === "A_TO_Z") {
-        sortedMovies.sort((a, b) => a.Title.localeCompare(b.Title));
-      }
-
-      if (sortValue === "Z_TO_A") {
-        sortedMovies.sort((a, b) => b.Title.localeCompare(a.Title));
-      }
-
-      setMovies(sortedMovies);
     }
 
     fetchMovies();

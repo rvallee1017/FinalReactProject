@@ -13,8 +13,8 @@ const Landing = () => {
               Ready to find your favorite <span className="purple">Movies</span>
             </h2>
             <Link to="/movies">
-            <button className="btn">Browse movies</button>
-          </Link>
+              <button className="btn">Browse movies</button>
+            </Link>
           </div>
           <figure className="header__img--wrapper">
             <img src={cinemaLanding} alt="" />

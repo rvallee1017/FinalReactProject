@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -20,9 +20,8 @@ body {
 nav {
   height: 110px;
   display: flex;
-  background-color: #f6edfd
+  background-color: #f6edfd;
 }
-
 
 img {
   width: 100%;
@@ -182,32 +181,31 @@ button:active {
 }
 
 .search__bar {
-    position: relative;
+  position: relative;
 }
 
 .search {
-    width: 200px;
-    height: 40px;
-    border-radius: 4px;
-    border: 1px solid #dcdfe6;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
 }
 
 .search_btn {
-    height: 40px;
-    border: 2px solid #7342d6;
-    border-radius: 6px;
-    color: #7342d6;
-    background-color: transparent;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-    width: 64px;
-    
+  height: 40px;
+  border: 2px solid #7342d6;
+  border-radius: 6px;
+  color: #7342d6;
+  background-color: transparent;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  width: 64px;
 }
 
 #filter {
-    width: 200px;
-    height: 40px;
+  width: 200px;
+  height: 40px;
 }
 
 /* 
@@ -217,7 +215,7 @@ LANDING
 */
 
 #landing {
-  background-color: rgba(115, 66, 214, 0.1)
+  background-color: rgba(115, 66, 214, 0.1);
 }
 
 header {
@@ -245,8 +243,6 @@ header {
   z-index: 100;
   width: 1200px;
   align-items: center;
-  
-  
 }
 
 .container {
@@ -391,12 +387,32 @@ FEATURES
 
 /* 
 
-EXPLORE
+MOVIE INFO PAGE
 
 */
 
-#explore {
-  background-color: rgba(115, 66, 214, 0.1);
+.movie-info {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.movie-info__poster {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.movie-info__text h1 {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.movie-info__text p {
+  margin-bottom: 12px;
+  font-size: 18px;
 }
 
 /* 
@@ -406,7 +422,7 @@ FOOTER
 */
 
 footer {
-  background-color: #242424;
+  background-color: #a173ec;
 }
 
 .footer__logo {
@@ -415,7 +431,6 @@ footer {
 
 .footer__logo--img {
   width: 160px;
-  filter: grayscale(1) invert(1);
 }
 
 .footer__link,
@@ -528,7 +543,6 @@ select {
   }
 }
 
-
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 550px) {
   .btn__menu {
@@ -553,7 +567,6 @@ select {
 
   .search {
     width: 100px;
-    
   }
 
   .search__bar {
@@ -566,7 +579,7 @@ select {
 
   .search_btn {
     font-size: 8px;
-    width:32px;
+    width: 32px;
     height: 32px;
   }
 
@@ -577,5 +590,4 @@ select {
   #filter {
     width: 140px;
   }
-
 }
