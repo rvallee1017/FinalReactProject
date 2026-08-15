@@ -41,9 +41,19 @@ const MovieInfo = () => {
         <p>
           <strong>Plot:</strong> {movie.Plot}
         </p>
+        <p>
+          <strong>Director:</strong> {movie.Director}
+        </p>    
+        <p>
+          <strong>Actors:</strong> {movie.Actors}
+        </p>
+        <p>
+            <strong>IMDB Rating:</strong> {movie.imdbRating}
+        </p>
       </div>
     </div>
   );
-};
+}
+
 
 export default MovieInfo;
