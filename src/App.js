@@ -5,7 +5,7 @@ import Footer from "./components/ui/Footer";
 import Home from "./components/pages/Home.jsx";
 import Movies from "./components/pages/Movies.jsx";
 import { Routes, Route } from "react-router-dom";
-import MovieInfo from "./components/pages/MovieInfo.jsx";
+import MovieInfo from "./components/ui/MovieInfo.jsx";
 
 function App() {
   return (

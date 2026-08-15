@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import MovieInfo from "../ui/MovieInfo.jsx";
 
 const Movies = () => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState("fast");
+  const [search, setSearch] = useState("fast");
 
   useEffect(() => {
     async function fetchMovies() {
       const response = await fetch(
-        "https://www.omdbapi.com/?i=${id}&apikey=8d9a5352",
+        `https://www.omdbapi.com/?s=${search}&apikey=8d9a5352`,
       );
 
       const data = await response.json();
@@ -15,7 +17,7 @@ const Movies = () => {
     }
 
     fetchMovies();
-  }, []);
+  }, [search]);
 
   return (
     <div className="container">
@@ -26,6 +28,8 @@ const Movies = () => {
             className="search"
             type="text"
             placeholder="Search movies..."
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
           />
 
           <select id="filter">
