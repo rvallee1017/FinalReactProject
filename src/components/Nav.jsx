@@ -25,8 +25,8 @@ const Nav = ({ numberOfItems }) => {
             </Link>
           </li>
           <li className="nav__list">
-            <Link to="/books" className="nav__link nav__link--primary">
-              Books
+            <Link to="/movies" className="nav__link nav__link--primary">
+              Movies
             </Link>
           </li>
           <button className="btn__menu" onClick={openMenu}>
@@ -45,8 +45,8 @@ const Nav = ({ numberOfItems }) => {
               </Link>
             </li>
             <li className="menu__list">
-              <Link to="/books" className="menu__link" onClick={closeMenu}>
-                Books
+              <Link to="/movies" className="menu__link" onClick={closeMenu}>
+                Movies
               </Link>
             </li>
             <li className="menu__list">

@@ -17,8 +17,8 @@ const Footer = () => {
               Home
             </Link>
             <span className="footer__link no-cursor">About</span>
-            <Link to="/books" className="footer__link">
-              Books
+            <Link to="/movies" className="footer__link">
+              Movies
             </Link>
             <Link to="/cart" className="footer__link">
               Cart
