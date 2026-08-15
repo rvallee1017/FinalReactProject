@@ -18,8 +18,9 @@ body {
 }
 
 nav {
-  height: 80px;
+  height: 110px;
   display: flex;
+  background-color: #f6edfd
 }
 
 
@@ -95,6 +96,8 @@ button:active {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  background-color: #f6edfd;
+  height: 110px;
 }
 
 .nav__link {
@@ -240,6 +243,10 @@ header {
 .header__img--wrapper {
   padding: 20px;
   z-index: 100;
+  width: 1200px;
+  align-items: center;
+  
+  
 }
 
 .container {

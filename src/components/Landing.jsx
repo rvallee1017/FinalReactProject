@@ -1,5 +1,6 @@
 import React from "react";
 import cinemaLanding from "../assets/cinema-landing.jpg";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -11,9 +12,9 @@ const Landing = () => {
             <h2>
               Ready to find your favorite <span className="purple">Movies</span>
             </h2>
-            <a href="#features">
-              <button className="btn">Browse movies</button>
-            </a>
+            <Link to="/movies">
+            <button className="btn">Browse movies</button>
+          </Link>
           </div>
           <figure className="header__img--wrapper">
             <img src={cinemaLanding} alt="" />

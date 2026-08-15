@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./index.css";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/ui/Footer";
 import Home from "./components/pages/Home.jsx";
 import Movies from "./components/pages/Movies.jsx";
 import { Routes, Route } from "react-router-dom";
+import MovieInfo from "./components/pages/MovieInfo.jsx";
 
 function App() {
   return (
