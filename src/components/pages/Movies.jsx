@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import MovieInfo from "../ui/MovieInfo.jsx";
 
 const Movies = () => {
-  const [movies, setMovies] = useState("fast");
+  const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("fast");
 
   useEffect(() => {
