@@ -23,7 +23,10 @@ const Movies = () => {
   useEffect(() => {
     async function fetchMovies() {
         const searchTerm = search.trim() || "fast";
-        
+        <input
+            value={searchTerm}
+            onChange={(event) => setSearch(event.target.value)}
+            />
       const response = await fetch(
         `https://www.omdbapi.com/?s=${search}&apikey=8d9a5352`,
       );
