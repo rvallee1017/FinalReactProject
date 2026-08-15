@@ -595,4 +595,9 @@ select {
   #filter {
     width: 140px;
   }
+
+  .movie-info {
+    flex-direction: column;
+    align-items: center;
+  }
 }
