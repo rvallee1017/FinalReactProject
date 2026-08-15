@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/movies-logo.png";
-import "../styles/App.css";
-import Nav from "./Nav";
-import Footer from "./ui/Footer";
+import Logo from "./assets/movies-logo.png";
+import "./index.css";
+import Nav from "./components/Nav.jsx";
+import Footer from "./components/ui/Footer";
 
 function App() {
   return (
