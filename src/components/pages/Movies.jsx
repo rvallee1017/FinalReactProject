@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("fast");
+  const [sort, setSort] = useState("");
 
   useEffect(() => {
     async function fetchMovies() {
@@ -12,6 +14,21 @@ const Movies = () => {
 
       const data = await response.json();
       setMovies(data.Search || []);
+    }
+
+    function sortMovies(event) {
+      const sortValue = event.target.value;
+      const sortedMovies = [...movies];
+
+      if (sortValue === "A_TO_Z") {
+        sortedMovies.sort((a, b) => a.Title.localeCompare(b.Title));
+      }
+
+      if (sortValue === "Z_TO_A") {
+        sortedMovies.sort((a, b) => b.Title.localeCompare(a.Title));
+      }
+
+      setMovies(sortedMovies);
     }
 
     fetchMovies();
@@ -30,7 +47,7 @@ const Movies = () => {
             onChange={(event) => setSearch(event.target.value)}
           />
 
-          <select id="filter">
+          <select id="filter" onChange={sortMovies}>
             <option value="">Sort by</option>
             <option value="A_TO_Z">A-Z</option>
             <option value="Z_TO_A">Z-A</option>
@@ -41,11 +58,13 @@ const Movies = () => {
           {movies.map((movie) => (
             <div className="movie" key={movie.imdbID}>
               <figure className="movie__img--wrapper">
-                <img
-                  className="movie__img"
-                  src={movie.Poster}
-                  alt={movie.Title}
-                />
+                <Link to={`/movies/${movie.imdbID}`}>
+                  <img
+                    className="movie__img"
+                    src={movie.Poster}
+                    alt={movie.Title}
+                  />
+                </Link>
               </figure>
               <div className="movie__title">{movie.Title}</div>
               <div className="movie__price">{movie.Year}</div>
