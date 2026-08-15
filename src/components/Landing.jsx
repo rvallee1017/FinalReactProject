@@ -1,5 +1,5 @@
 import React from "react";
-import cinema-landing from "../assets/cinema-landing.png";
+import cinemaLanding from "../assets/cinema-landing.jeg";
 
 const Landing = () => {
   return (
@@ -16,7 +16,7 @@ const Landing = () => {
             </a>
           </div>
           <figure className="header__img--wrapper">
-            <img src={cinema-landing} alt="" />
+            <img src={cinemaLanding} alt="" />
           </figure>
         </div>
       </header>
