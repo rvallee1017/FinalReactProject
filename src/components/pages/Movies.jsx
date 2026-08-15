@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Movies = () => {
@@ -14,3 +14,5 @@ const Movies = () => {
     </div>
   );
 };
+
+export default Movies;
