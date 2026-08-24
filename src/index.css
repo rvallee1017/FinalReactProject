@@ -219,17 +219,12 @@ LANDING
 }
 
 header {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 110px);
 }
 
 .header__container {
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+min-height: calc(100vh - 110px);
+  height: auto;
 }
 
 .header__description {
